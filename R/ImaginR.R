@@ -92,7 +92,7 @@ PictureResults<-function(picture){
   gmr <- round(gm, 0)
   bm <- mean(mean.color$B) # averaging the blue channel color
   bmr <- round(bm, 0)
-  color <- rgb(rmr, gmr, bmr, max=255) # convert code 1
+  color <- rgb(rmr, gmr, bmr, maxColorValue=255) # convert code 1
   hsv <-rgb2hsv(col2rgb(color)) # convert code 2
 
   # give a marvelous made
@@ -148,7 +148,7 @@ ColorPhenotype <- function(picture){
   gmr <- round(gm, 0)
   bm <- mean(mean.color$B)
   bmr <- round(bm, 0)
-  color <- rgb(rmr, gmr, bmr, max=255)
+  color <- rgb(rmr, gmr, bmr, maxColorValue=255)
   hsv <-rgb2hsv(col2rgb(color))
 
   # Import the hsv data of 30 valves of 5 Pinctada margaritifera wich are come from Rikitea
@@ -273,7 +273,7 @@ OneRow <- function(picture){
   gmr <- round(gm, 0)
   bm <- mean(mean.color$B) # averaging the blue channel color
   bmr <- round(bm, 0)
-  color <- rgb(rmr, gmr, bmr, max=255) # convert code 1
+  color <- rgb(rmr, gmr, bmr, maxColorValue=255) # convert code 1
   hsv <-rgb2hsv(col2rgb(color)) # convert code 2
 
   R1 <- 0.162577
