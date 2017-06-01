@@ -1,15 +1,15 @@
 Package: ImaginR
 Type: Package
-Title: ImaginR
+Title: Delimit and Characterize Color Phenotype of the Pearl Oyster
 Version: 0.1.7
+Date: 2017-05-29
 Author: Pierre-Louis Stenger <Pierre.Louis.Stenger@ifremer.fr>
 Maintainer: Pierre-Louis Stenger <Pierre.Louis.Stenger@ifremer.fr>
-Description: Package to delimit the color phenotype of the pearl oyster's inner shell (Pinctada margaritifera) and to characterize there color variations (by the HSV color code system).
-Depends:
-  imager,
-  grDevices,
-  jpeg
-License: MIT
+Description: The pearl oyster, Pinctada margaritifera (Linnaeus, 1758), represents the second economic resource of French Polynesia. It is one of the only bivalves expressing a large varied range of inner shell color, & by correlation, of pearl color. This phenotypic variability is partly under genetic control, but also under environmental influence. With ImaginR, it's now possible to delimit the color phenotype of the pearl oyster's inner shell and to characterize their color variations (by the HSV color code system) with pictures.
+Depends: imager
+Imports: grDevices, jpeg
+License: GPL (>= 2)
+BugReports: https://github.com/PLStenger/ImaginR/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
