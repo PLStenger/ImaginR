@@ -151,7 +151,7 @@ ColorPhenotype <- function(picture){
   color <- rgb(rmr, gmr, bmr, maxColorValue=255)
   hsv <-rgb2hsv(col2rgb(color))
 
-  # Import the hsv data of 30 valves of 5 Pinctada margaritifera wich are come from Rikitea
+  # Import the hsv data of 30 valves of 5 Pinctada margaritifera/color phenotype wich are come from Rikitea
   # (Gambier's archipelago) and from a same reproduction.
   # The brood were choseen for they coloration
   # There are 10 valves by color phenotypes (red, yellow and green)
@@ -192,6 +192,11 @@ ColorPhenotype <- function(picture){
   # sdV <- sd(datV$h)
   # V1 <- maxV + (sdV)
   # V2 <- minV - (sdV)
+
+# For the V2 of this package, more than 100 valves of more than 50 individuals for each phenotype (red, green and yellow) from 3 differents sites
+# (eg. Takapoto (Tuamotu archipelago), Mangareva (Gambier archipelago) and Katiu(Tuamotu archipelago)) were used for a machine learning with this protocol (code above) and in order to delimit pheontype
+# from diverses regions. So, with the 15 individuals from the V1 of this package, these color phenotype delimitations are from 50 individuals * 3 colors phenotype * 3 sites =
+# = 465 individuals (or 930 valves) 
 
   R1 <- 0.1625770
   R2 <- 0.0000000    # 0.02340927
