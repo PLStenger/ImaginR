@@ -193,10 +193,6 @@ ColorPhenotype <- function(picture){
   # V1 <- maxV + (sdV)
   # V2 <- minV - (sdV)
 
-# For the V2 of this package, more than 100 valves of more than 50 individuals for each phenotype (red, green and yellow) from 3 differents sites
-# (eg. Takapoto (Tuamotu archipelago), Mangareva (Gambier archipelago) and Katiu(Tuamotu archipelago)) were used for a machine learning with this protocol (code above) and in order to delimit pheontype
-# from diverses regions. So, with the 15 individuals from the V1 of this package, these color phenotype delimitations are from 50 individuals * 3 colors phenotype * 3 sites =
-# = 465 individuals (or 930 valves) 
 
   R1 <- 0.1625770
   R2 <- 0.0000000    # 0.02340927
