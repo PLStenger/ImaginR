@@ -13,7 +13,7 @@ To see some color phenotype, go to https://plstenger.github.io/
 ![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
 
 # Install from CRAN:
-`install.packages("ImaginR")`
+``install.packages("ImaginR")`
 
 # Install from Github: (much more up to date)
 `install.packages("devtools") 
@@ -23,7 +23,7 @@ library(devtools)
 install_github("PLStenger/ImaginR") 
 
 library("ImaginR")
-`
+``
 
 # Quick start (this section will be completed soon after publication of the linked study)
 Put all your pictures in one folder. 
