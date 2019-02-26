@@ -10,6 +10,7 @@ To see some color phenotype, go to https://plstenger.github.io/
 
 # sections DIY will be completed soon after publication of the linked study
 
+![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
 
 # Quick start (this section will be completed soon after publication of the linked study)
 Put all your pictures in one folder. Open R. `setwd()` in this folder.
