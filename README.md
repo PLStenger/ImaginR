@@ -17,8 +17,11 @@ To see some color phenotype, go to https://plstenger.github.io/
 
 # Install from Github: (much more up to date)
 `install.packages("devtools") 
+
 library(devtools) 
+
 install_github("PLStenger/ImaginR") 
+
 library("ImaginR")
 `
 
