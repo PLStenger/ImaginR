@@ -25,7 +25,7 @@ To see some color phenotype, go to https://plstenger.github.io/
 `library("ImaginR")`
 
 
-# Quick start (this section will be completed soon after publication of the linked study)
+# Quick start
 Put all your pictures in one folder. 
 
 Open R. 
@@ -35,3 +35,6 @@ Open R.
 Run the main fonction is `OutPutResult()`. 
 
 Let's see the results !
+
+# For more details see the publication of ImaginR in the Scientific report journal here:
+https://www.nature.com/articles/s41598-019-43777-4
