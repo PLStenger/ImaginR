@@ -1,4 +1,5 @@
 # Analysing color phenotype and their variations on Pearl oyster *Pinctada margaritifera* (Linnaeus, 1758) with `ImaginR`
+
 An R Package to delimit the color phenotype of the pearl oyster's inner shell (Pinctada margaritifera) and to characterize there color variations (by the HSV color code system).
 
 The pearl oyster, *Pinctada margaritifera*, represents the second economic resource of French Polynesia.
@@ -13,19 +14,22 @@ To see some color phenotype, go to https://plstenger.github.io/
 ![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
 
 # Install from CRAN:
-`install.packages("ImaginR")`
+
+```r
+install.packages("ImaginR")
+```
 
 # Install from Github: (much more up to date)
-`install.packages("devtools") `
 
-`library(devtools)` 
-
-`install_github("PLStenger/ImaginR") `
-
-`library("ImaginR")`
-
+```r
+install.packages("devtools")
+library(devtools)
+install_github("PLStenger/ImaginR")
+library("ImaginR")
+```
 
 # Quick start
+
 Put all your pictures in one folder. 
 
 Open R. 
@@ -37,4 +41,5 @@ Run the main fonction is `OutPutResult()`.
 Let's see the results !
 
 # For more details see the publication of ImaginR in the Scientific report journal here:
+
 https://www.nature.com/articles/s41598-019-43777-4
