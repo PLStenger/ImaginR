@@ -428,7 +428,7 @@ OneRow_microscopy <- function(picture){
     "Electric blue"
   } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
     "Light green"
-  } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
+  } else if ((hsv[1,] >= LY2) & (hsv[1,] <= LY1)){
     "Light yellow"
   } else if ((hsv[1,] >= FGC2) & (hsv[1,] <= FGC1)){
     "Fluo green"
