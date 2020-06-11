@@ -19,13 +19,11 @@ https://www.nature.com/articles/s41598-019-43777-4
 `install.packages("ImaginR")`
 
 # Install from Github: (much more up to date)
-`install.packages("devtools") `
 
-`library(devtools)` 
-
-`install_github("PLStenger/ImaginR") `
-
-`library("ImaginR")`
+    install.packages("devtools")
+    library(devtools)
+    install_github("PLStenger/ImaginR")
+    library("ImaginR")
 
 
 # Quick start
@@ -45,10 +43,10 @@ Warning: If you need to redo analysis, please delete or change the name of the b
 
 If you have already use old `ImaginR` version on your current analysis, please, save your work, quit R and R Studio. Re-open your file, don't run `ImaginR`, don't use the `ImaginR` CRAN version, because it wasn't already up-to-date. Please, install the new version from github:
 
-`install.packages("devtools") `
-`library(devtools)` 
-`install_github("PLStenger/ImaginR") `
-`library("ImaginR")`
+    install.packages("devtools")
+    library(devtools)
+    install_github("PLStenger/ImaginR")
+    library("ImaginR")
 
 Then put your pictures in a folder, and set your working directory on it with `setwd()` or scroll with the R studio finder on the right to found the folder, clic on the button from R Studio on the right 'more' and then clic on 'Set As Working Directory'.
 
