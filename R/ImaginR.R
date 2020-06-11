@@ -431,9 +431,9 @@ OneRow_microscopy <- function(picture){
   } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
     "Light yellow"
   } else if ((hsv[1,] >= FGC2) & (hsv[1,] <= FGC1)){
-    "fluo green coral-like"
+    "Fluo green"
   }else {
-    "other coloration"
+    "Other coloration"
   }
   
   
