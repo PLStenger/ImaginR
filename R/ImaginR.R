@@ -346,3 +346,126 @@ OutPutResult <- function(id){
 
 
 
+#' Get phenotype, HEX and HSV color code for one picture
+#'
+#' Get results in one row
+#' @param picture The picture uploaded by load.image()
+#' @return The HEX and HSV color code and the color phenotype of the pearl oyster's inner shell for one image in one row
+#' @details
+#' In header:
+#' \itemize{
+#'  \item{id : the name of your pictures}
+#'  \item{h : the hue of the hsv color code}
+#'  \item{s : the saturation of the hsv color code}
+#'  \item{v : the value of the hsv color code}
+#'  \item{hex : the hexadecimal color code}
+#'  \item{phenotype : returns the color phenotype of the pearl oyster's inner shell (\emph{Pinctada margaritifera})}
+#' }
+#' @examples
+#' fpath <- system.file('extdata/image.jpg',package='ImaginR')
+#' picture <- load.image(fpath)
+#' OneRow_microscopy(picture)
+#' @export
+OneRow_microscopy <- function(picture){
+  pictureDm <- dim(picture) # dimension it
+  # create a new data.frame with these datas
+  pictureRGB <- data.frame(
+    R = as.vector(picture[,,1]),
+    G = as.vector(picture[,,2]),
+    B = as.vector(picture[,,3])
+  )
+  # "rgb it" the get the HEX color code
+  pictureHEX <- rgb(pictureRGB[,"R"], pictureRGB[,"G"], pictureRGB[,"B"], maxColorValue=1)
+  # remove <- read.table("remove.txt", sep=",") # this table contain all white HEX color code
+  remove <- system.file("extdata", "remove_black.txt", package="ImaginR")
+  remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
+  pictureHEX <- pictureHEX [! pictureHEX %in% remove] # remove the white color of the background of the picture
+  
+  
+  # hex2rgb : to give RGB color code from HEX color code
+  hex2rgb <- function(color.vector) {
+    resultat <- matrix( NA, ncol=3, nrow=length(color.vector), dimnames=list( NULL, c( "R", "G", "B")))
+    resultat[,"R"] <- strtoi( substr(color.vector, 2, 3), 16L)
+    resultat[,"G"] <- strtoi( substr(color.vector, 4, 5), 16L)
+    resultat[,"B"] <- strtoi( substr(color.vector, 6, 7), 16L)
+    resultat
+  }
+  
+  RGB0 <- matrix(hex2rgb(pictureHEX), ncol=3, byrow=F) # creat a matrix with the new datas
+  colnames(RGB0) <- c("R", "G", "B") # give columns a name
+  mean.color <- as.data.frame(RGB0) # create new data.frame to averaging the colors
+  rm <- mean(mean.color$R) # averaging the red channel color
+  rmr <- round(rm, 0)
+  gm <- mean( mean.color$G) # averaging the green channel color
+  gmr <- round(gm, 0)
+  bm <- mean(mean.color$B) # averaging the blue channel color
+  bmr <- round(bm, 0)
+  color <- rgb(rmr, gmr, bmr, maxColorValue=255) # convert code 1
+  hsv <-rgb2hsv(col2rgb(color)) # convert code 2
+  
+  R1 <- 0.162577
+  R2 <- 0.0000000  # 0.02340927
+  J1 <- 0.2790814
+  J2 <- 0.1625774
+  V1 <- 0.5637775
+  V2 <- 0.3215928
+  
+  # What's color phenotype is it ?
+  phenotype <- if ((hsv[1,] >= 0) & (hsv[1,] <= R1)){
+    "Red phenotype"
+  } else if ((hsv[1,] >= 1-R1) & (hsv[1,] <= 1)){
+    "Red phenotype"
+  } else if ((hsv[1,] >= J2) & (hsv[1,] <= J1)){
+    "Yellow phenotype"
+  } else if ((hsv[1,] >= V2) & (hsv[1,] <= V1)){
+    "Green phenotype"
+  }else {
+    "other phenotype"
+  }
+  
+  # get results in one row
+  mhsv <- matrix(hsv[,1], dimnames = NULL)
+  OneRow_microscopy <- c(c(mhsv), color, phenotype)
+  OneRow_microscopy <- c(OneRow_microscopy)
+  
+  return(OneRow_microscopy)
+}
+
+
+
+
+#' Get phenotype, HEX and HSV color code for all pictures
+#'
+#' Get results in a .txt file, .csv file and in R data.frame
+#' This function does what all the others functions do in a very simple way. Just put your images in your working directory (don't forget to getwd() !), do library this package and paste this only code: "OutPutResult()". You will get the results into your consol and in a results.csv file in your working directory.
+#' @param id The name of the pictures in your working directory
+#' @return The HEX and HSV color code and the color phenotype of the pearl oyster's inner shell for all images in a results.csv file
+#' @details
+#' In results.csv:
+#' \itemize{
+#'  \item{id : the name of your pictures}
+#'  \item{h : the hue of the hsv color code}
+#'  \item{s : the saturation of the hsv color code}
+#'  \item{v : the value of the hsv color code}
+#'  \item{hex : the hexadecimal color code}
+#'  \item{phenotype : returns the color phenotype of the pearl oyster's inner shell (\emph{Pinctada margaritifera})}
+#' }
+#' @export
+OutPutResult_microscopy <- function(id){
+  id <- list.files(pattern = ".jpg")
+  for(i in id){
+    sink("OutPutAnalysis_microscopy.txt", append=TRUE)
+    picture <- load.image(i)
+    a <- OneRow_microscopy(picture)
+    print(a)
+    sink()
+    sink()
+    sink()
+  }
+  id <- list.files(pattern = ".jpg")
+  res <- read.table("OutPutAnalysis_microscopy.txt")
+  dat <- data.frame(id, res$V2, res$V3, res$V4, res$V5, res$V6)
+  colnames(dat) <- c("id", "h", "s", "v", "hex","phenotype")
+  write.table(dat, file = "results_microscopy.csv", sep=";")
+  return(dat)
+}
