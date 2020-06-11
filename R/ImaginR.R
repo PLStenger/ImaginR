@@ -421,17 +421,17 @@ OneRow_microscopy <- function(picture){
   
   # What's color phenotype is it ?
   phenotype <- if ((hsv[1,] >= 0) & (hsv[1,] <= O1)){
-    "Orange coloration"
+    "Orange"
   } else if ((hsv[1,] >= 1-O1) & (hsv[1,] <= 1)){
-    "Orange-reddish coloration"
+    "Orange-reddish"
   } else if ((hsv[1,] >= EB2) & (hsv[1,] <= EB1)){
-    "Electric blue coloration"
+    "Electric blue"
   } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
-    "Light green coloration"
+    "Light green"
   } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
-    "Light yellow coloration"
+    "Light yellow"
   } else if ((hsv[1,] >= FGC2) & (hsv[1,] <= FGC1)){
-    "fluo green like coral coloration"
+    "fluo green coral-like"
   }else {
     "other coloration"
   }
