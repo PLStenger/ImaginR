@@ -403,25 +403,39 @@ OneRow_microscopy <- function(picture){
   color <- rgb(rmr, gmr, bmr, maxColorValue=255) # convert code 1
   hsv <-rgb2hsv(col2rgb(color)) # convert code 2
   
-  R1 <- 0.162577
-  R2 <- 0.0000000  # 0.02340927
-  J1 <- 0.2790814
-  J2 <- 0.1625774
-  V1 <- 0.5637775
-  V2 <- 0.3215928
+  O1 <- 0.1
+  O2 <- 0.0000000 
+  
+  EB1 <- 0.65
+  EB2 <- 0.54
+  
+  LG1 <- 0.39
+  LG2 <- 0.35
+  
+  LY1 <- 0.16
+  LY2 <- 0.14
+
+  FGC1 <- 0.139
+  FGC2 <- 0.11
+  
   
   # What's color phenotype is it ?
-  phenotype <- if ((hsv[1,] >= 0) & (hsv[1,] <= R1)){
-    "Red phenotype"
-  } else if ((hsv[1,] >= 1-R1) & (hsv[1,] <= 1)){
-    "Red phenotype"
-  } else if ((hsv[1,] >= J2) & (hsv[1,] <= J1)){
-    "Yellow phenotype"
-  } else if ((hsv[1,] >= V2) & (hsv[1,] <= V1)){
-    "Green phenotype"
+  phenotype <- if ((hsv[1,] >= 0) & (hsv[1,] <= O1)){
+    "Orange coloration"
+  } else if ((hsv[1,] >= 1-O1) & (hsv[1,] <= 1)){
+    "Orange-reddish coloration"
+  } else if ((hsv[1,] >= EB2) & (hsv[1,] <= EB1)){
+    "Electric blue coloration"
+  } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
+    "Light green coloration"
+  } else if ((hsv[1,] >= LG2) & (hsv[1,] <= LG1)){
+    "Light yellow coloration"
+  } else if ((hsv[1,] >= FGC2) & (hsv[1,] <= FGC1)){
+    "fluo green like coral coloration"
   }else {
-    "other phenotype"
+    "other coloration"
   }
+  
   
   # get results in one row
   mhsv <- matrix(hsv[,1], dimnames = NULL)
