@@ -1,4 +1,5 @@
 <img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" width="250" height="250" class="center" style="display:block;float:none;margin-left:auto;margin-right:auto;width:60%">
+<img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" style="display:block;float:none;margin-left:auto;margin-right:auto;width:60%">
 
 # Delimit and analyse color hues & color variations with `ImaginR`
 
