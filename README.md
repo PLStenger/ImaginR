@@ -1,3 +1,5 @@
+![alt tag](https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png)
+
 # Delimit and analyse color hues & color variations with `ImaginR`
 
 ## Analysing color phenotype and their variations on Pearl oyster *Pinctada margaritifera* (Linnaeus, 1758) with `ImaginR`
