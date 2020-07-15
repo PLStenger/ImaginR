@@ -5,6 +5,7 @@
 # Delimit and analyse color hues & color variations with `ImaginR`
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/ImaginR)](https://cran.r-project.org/package=ImaginR) [![CRAN_Release_Date](https://www.r-pkg.org/badges/ago/ImaginR)](https://cran.r-project.org/package=ImaginR)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ImaginR)](https://cran.r-project.org/package=ImaginR)
 
 ## Analysing color phenotype and their variations on Pearl oyster *Pinctada margaritifera* (Linnaeus, 1758) with `ImaginR`
 An R Package to delimit the color phenotype of the pearl oyster's inner shell (Pinctada margaritifera) and to characterize there color variations (by the HSV color code system).
