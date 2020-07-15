@@ -1,4 +1,5 @@
 ![alt tag](https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png)
+<img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" width="100" height="100">
 
 # Delimit and analyse color hues & color variations with `ImaginR`
 
