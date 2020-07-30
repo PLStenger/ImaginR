@@ -8,10 +8,10 @@
 <img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" width="250" height="250">
 </div>
 
-# Install from CRAN:
+## Install from CRAN:
 `install.packages("ImaginR")`
 
-# Install from Github: (much more up to date)
+## Install from Github: (much more up to date)
 
     install.packages("devtools")
     library(devtools)
@@ -19,7 +19,7 @@
     library("ImaginR")
 
 
-# Quick start
+## Quick start
 Put all your pictures in one folder. 
 
 Open R. 
@@ -45,11 +45,11 @@ To see some color phenotype, go to https://plstenger.github.io/
 
 ![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
 
-# For more details see the publication of ImaginR in the Scientific report journal here:
+## For more details see the publication of ImaginR in the Scientific report journal here:
 https://www.nature.com/articles/s41598-019-43777-4
 
 
-# II) Update 06/12/2020 : Using `ImaginR` for fluorescent microscope images.
+## II) Update 06/12/2020 : Using `ImaginR` for fluorescent microscope images.
 
 If you have already use old `ImaginR` version on your current analysis, please, save your work, quit R and R Studio. Re-open your file, don't run `ImaginR`, don't use the `ImaginR` CRAN version, because it wasn't already up-to-date. Please, install the new version from github:
 
