@@ -1,26 +1,12 @@
-<div align="center">
-<img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" width="250" height="250">
-</div>
-
-# Delimit and analyse color hues & color variations with `ImaginR`
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/ImaginR)](https://cran.r-project.org/package=ImaginR) [![CRAN_Release_Date](https://www.r-pkg.org/badges/ago/ImaginR)](https://cran.r-project.org/package=ImaginR)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ImaginR)](https://cran.r-project.org/package=ImaginR)
 
-## Analysing color phenotype and their variations on Pearl oyster *Pinctada margaritifera* (Linnaeus, 1758) with `ImaginR`
-An R Package to delimit the color phenotype of the pearl oyster's inner shell (Pinctada margaritifera) and to characterize there color variations (by the HSV color code system).
+## Delimit and analyse color hues & color variations with `ImaginR`
 
-The pearl oyster, *Pinctada margaritifera*, represents the second economic resource of French Polynesia.
-It is one of the only bivalves expressing a large varied range of inner shell color, and by correlation, of pearl color.
-This phenotypic variability is partly under genetic control, but also under environmental influence.
-With `ImaginR`, it's now possible to delimit the color phenotype of the pearl oyster's inner shell and to characterize their color variations (by the HSV color code system) with pictures.
-
-To see some color phenotype, go to https://plstenger.github.io/
-
-![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
-
-# For more details see the publication of ImaginR in the Scientific report journal here:
-https://www.nature.com/articles/s41598-019-43777-4
+<div align="center">
+<img src="https://github.com/PLStenger/ImaginR/blob/master/logo_imaginr.png" width="250" height="250">
+</div>
 
 # Install from CRAN:
 `install.packages("ImaginR")`
@@ -46,7 +32,24 @@ Let's see the results !
 
 Warning: If you need to redo analysis, please delete or change the name of the both OutPutAnalysis.txt and results.csv files in order to avoid confrontations.
 
-# Update 06/12/2020 : Using `ImaginR` for fluorescent microscope images.
+
+## I) Analysing color phenotype and their variations on Pearl oyster *Pinctada margaritifera* (Linnaeus, 1758) with `ImaginR`
+An R Package to delimit the color phenotype of the pearl oyster's inner shell (Pinctada margaritifera) and to characterize there color variations (by the HSV color code system).
+
+The pearl oyster, *Pinctada margaritifera*, represents the second economic resource of French Polynesia.
+It is one of the only bivalves expressing a large varied range of inner shell color, and by correlation, of pearl color.
+This phenotypic variability is partly under genetic control, but also under environmental influence.
+With `ImaginR`, it's now possible to delimit the color phenotype of the pearl oyster's inner shell and to characterize their color variations (by the HSV color code system) with pictures.
+
+To see some color phenotype, go to https://plstenger.github.io/
+
+![alt tag](https://github.com/PLStenger/ImaginR/blob/master/pmarg.png)
+
+# For more details see the publication of ImaginR in the Scientific report journal here:
+https://www.nature.com/articles/s41598-019-43777-4
+
+
+# II) Update 06/12/2020 : Using `ImaginR` for fluorescent microscope images.
 
 If you have already use old `ImaginR` version on your current analysis, please, save your work, quit R and R Studio. Re-open your file, don't run `ImaginR`, don't use the `ImaginR` CRAN version, because it wasn't already up-to-date. Please, install the new version from github:
 
