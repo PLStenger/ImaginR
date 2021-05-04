@@ -483,3 +483,52 @@ OutPutResult_microscopy <- function(id){
   write.table(dat, file = "results_microscopy.csv", sep=";")
   return(dat)
 }
+
+
+#' Give the percent of forest covarage
+#'
+#' Give the percent of forest covarage by comparing two pictures : the first one (x) is the original (aerial) image and the second (y) is the same image but without the soil (only forest cover is keep)  
+#'
+#' @param x path of the original image 
+#' @param y path of the same image but without the soil (only forest cover is keep)
+#' @return Percentage of forest cover (0 to 100%)
+#' @examples
+#' Forest_cover("A1_DJI_0026_cleaned_empty_before.JPG", "A1_DJI_0026_cleaned_empty.JPG")
+#' 26.82175
+#'@export
+Forest_cover <- function(x, y) {
+  picture <- load.image(y)
+  pictureDm <- dim(picture) # dimension it
+  # create a new data.frame with these datas
+  pictureRGB <- data.frame(
+    R = as.vector(picture[,,1]),
+    G = as.vector(picture[,,2]),
+    B = as.vector(picture[,,3])
+  )
+  # "rgb it" the get the HEX color code
+  pictureHEX <- rgb(pictureRGB[,"R"], pictureRGB[,"G"], pictureRGB[,"B"], maxColorValue=1)
+  # remove <- read.table("remove.txt", sep=",") # this table contain all white HEX color code
+  remove <- system.file("extdata", "remove.txt", package="ImaginR")
+  remove <- read.table("remove.txt", sep=",") 
+  remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
+  pictureHEX <- pictureHEX [! pictureHEX %in% remove] # remove the white color of the background of the picture
+  
+  picture <- load.image(x)
+  pictureDm_02 <- dim(picture_02) # dimension it
+  # create a new data.frame with these datas
+  pictureRGB_02 <- data.frame(
+    R = as.vector(picture_02[,,1]),
+    G = as.vector(picture_02[,,2]),
+    B = as.vector(picture_02[,,3])
+  )
+  # "rgb it" the get the HEX color code
+  pictureHEX_02 <- rgb(pictureRGB_02[,"R"], pictureRGB_02[,"G"], pictureRGB_02[,"B"], maxColorValue=1)
+  # remove <- read.table("remove.txt", sep=",") # this table contain all white HEX color code
+  remove <- system.file("extdata", "remove.txt", package="ImaginR")
+  remove <- read.table("remove.txt", sep=",") 
+  
+  remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
+  pictureHEX_02 <- pictureHEX_02 [! pictureHEX_02 %in% remove] # remove the white color of the background of the picture
+  
+  print((length(pictureHEX)/length(pictureHEX_02))*100)
+}
