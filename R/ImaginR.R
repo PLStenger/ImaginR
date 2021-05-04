@@ -511,7 +511,7 @@ Forest_cover <- function(x, y) {
   pictureHEX <- rgb(pictureRGB[,"R"], pictureRGB[,"G"], pictureRGB[,"B"], maxColorValue=1)
   # remove <- read.table("remove.txt", sep=",") # this table contain all white HEX color code
   remove <- system.file("extdata", "remove.txt", package="ImaginR")
-  #remove <- read.table("remove.txt", sep=",") 
+  remove <- read.table(remove, sep=",") 
   remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
   pictureHEX <- pictureHEX [! pictureHEX %in% remove] # remove the white color of the background of the picture
   
@@ -527,7 +527,7 @@ Forest_cover <- function(x, y) {
   pictureHEX_02 <- rgb(pictureRGB_02[,"R"], pictureRGB_02[,"G"], pictureRGB_02[,"B"], maxColorValue=1)
   # remove <- read.table("remove.txt", sep=",") # this table contain all white HEX color code
   remove <- system.file("extdata", "remove.txt", package="ImaginR")
- # remove <- read.table("remove.txt", sep=",") 
+  remove <- read.table(remove, sep=",") 
   
   remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
   pictureHEX_02 <- pictureHEX_02 [! pictureHEX_02 %in% remove] # remove the white color of the background of the picture
