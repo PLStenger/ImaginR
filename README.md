@@ -18,6 +18,10 @@
     install_github("PLStenger/ImaginR")
     library("ImaginR")
 
+    # If "Error in fetch(key) : lazy-load database "
+    # Run:
+    .rs.restartR()
+
 
 ## Quick start
 Put all your pictures in one folder. 
