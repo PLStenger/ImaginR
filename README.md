@@ -80,6 +80,7 @@ Obtain the forest cover by comparing two images with the `Forest_cover(x, y)` ne
 - the second picture (`y`, corresponding to the right image, named "A1_DJI_0026_cleaned_empty.JPG") is the same image but without the soil (only forest cover is keep, with Gimp for example).
 
 ex : 
+
       Forest_cover("A1_DJI_0026_cleaned_empty_before.JPG", "A1_DJI_0026_cleaned_empty.JPG")
       [1] 26.82175
 
