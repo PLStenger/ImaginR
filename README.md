@@ -71,4 +71,18 @@ Only for fluorescent microscope images with black background, run this function 
 Normally, two files will be created into your folder (if your pictures are heavy, and.or if you have a lot of pictures, this could be take time (depend alos of your computer RAM power).
 The first, the 'OutPutAnalysis_microscopy.txt' file is the raw results, and the second file, "results_microscopy.csv", is your results with the picture's names (warning: the header is shifted, will be fixed later).
 
+## III) Update 04/05/2021 : Using `ImaginR` for measure forest cover images.
+
+![alt tag](https://github.com/PLStenger/ImaginR/blob/master/forest_cover.png.png)
+
+Obtain the forest cover by comparing two images with the `Forest_cover(x, y)` new function :
+- the first picture (`x`, corresponding to the left image, named "A1_DJI_0026_cleaned_empty_before.JPG") is the original (aerial) image and 
+- the second picture (`y`, corresponding to the right image, named "A1_DJI_0026_cleaned_empty.JPG") is the same image but without the soil (only forest cover is keep, with Gimp for example).
+
+ex : 
+      Forest_cover("A1_DJI_0026_cleaned_empty_before.JPG", "A1_DJI_0026_cleaned_empty.JPG")
+      [1] 26.82175
+
+Actually, the number of pixels from the second picture (`y`) is divided by the number of the first picture (`x`) and the result is put in percentages.
+Here, in this example, the open low maquis is covering 26.82% of the area.
 
