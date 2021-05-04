@@ -73,7 +73,7 @@ The first, the 'OutPutAnalysis_microscopy.txt' file is the raw results, and the 
 
 ## III) Update 04/05/2021 : Using `ImaginR` for measure forest cover images.
 
-![alt tag](https://github.com/PLStenger/ImaginR/blob/master/forest_cover.png.png)
+![alt tag](https://github.com/PLStenger/ImaginR/blob/master/forest_cover.png)
 
 Obtain the forest cover by comparing two images with the `Forest_cover(x, y)` new function :
 - the first picture (`x`, corresponding to the left image, named "A1_DJI_0026_cleaned_empty_before.JPG") is the original (aerial) image and 
