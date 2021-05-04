@@ -515,7 +515,7 @@ Forest_cover <- function(x, y) {
   remove <-trimws(as.vector(t(remove))) #trimws to fix the bug with spaces and comas into the txt file
   pictureHEX <- pictureHEX [! pictureHEX %in% remove] # remove the white color of the background of the picture
   
-  picture <- load.image(x)
+  picture_02 <- load.image(x)
   pictureDm_02 <- dim(picture_02) # dimension it
   # create a new data.frame with these datas
   pictureRGB_02 <- data.frame(
