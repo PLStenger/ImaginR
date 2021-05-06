@@ -2,6 +2,8 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/ImaginR)](https://cran.r-project.org/package=ImaginR) [![CRAN_Release_Date](https://www.r-pkg.org/badges/ago/ImaginR)](https://cran.r-project.org/package=ImaginR)
 [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ImaginR)](https://cran.r-project.org/package=ImaginR)
 
+## Actual GitHub ImaginR version : 2.0.1
+
 ## Delimit and analyse color hues & color variations with `ImaginR`
 
 <div align="center">
